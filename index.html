@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Borja Anadon · Growth engines</title>
-  <meta name="description" content="I build AI-powered growth engines for early-stage B2B founders. Less time chasing leads, more time building." />
+  <title>Borja Anadon · Motores de crecimiento</title>
+  <meta name="description" content="He estado donde tú estás: persiguiendo clientes a mano. La salida no era otra herramienta, era un sistema. Menos tiempo persiguiendo clientes, más tiempo construyendo." />
   <style>
     :root {
       --bg: #0e0f13;
@@ -31,58 +31,55 @@
     /* top bar */
     .topbar { display: flex; justify-content: space-between; align-items: center; padding: 26px 0; border-bottom: 1px solid var(--border); }
     .topbar .name { font-weight: 700; letter-spacing: -0.01em; font-size: 1.05rem; }
-    .topbar a.link { color: var(--muted); font-size: 0.92rem; transition: color 0.15s; }
-    .topbar a.link:hover { color: var(--text); }
 
     /* hero */
     .hero { padding: 92px 0 80px; }
-    .hero h1 { font-size: clamp(2.6rem, 7.5vw, 5.2rem); line-height: 1.0; letter-spacing: -0.04em; font-weight: 800; max-width: 17ch; }
-    .hero-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; margin-top: 40px; flex-wrap: wrap; }
-    .hero-desc { font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--muted); max-width: 42ch; }
+    .hero h1 { font-size: clamp(2rem, 5.6vw, 4.1rem); line-height: 1.06; letter-spacing: -0.035em; font-weight: 800; }
+    .hero-desc { font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--muted); margin-top: 30px; line-height: 1.55; }
     .hero-desc strong { color: var(--text); font-weight: 600; }
-    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
     .btn { display: inline-flex; align-items: center; font-size: 1rem; font-weight: 600; padding: 14px 26px; border-radius: 8px; white-space: nowrap; transition: transform 0.15s, background 0.15s, border-color 0.15s; }
     .btn-primary { background: var(--accent); color: #0b0c10; }
     .btn-primary:hover { transform: translateY(-2px); }
     .btn-ghost { border: 1px solid var(--border); color: var(--text); }
     .btn-ghost:hover { border-color: var(--accent); }
 
-    /* sections: header left, content right */
+    /* sections */
     section { padding: 60px 0; border-top: 1px solid var(--border); }
-    .block { display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: start; }
-    .block-head .lead { font-size: clamp(1.4rem, 2.4vw, 1.95rem); font-weight: 700; letter-spacing: -0.02em; margin-top: 14px; }
-    .block-head .lead .dim { color: var(--muted); }
-    .block-head .intro { color: var(--muted); margin-top: 14px; font-size: 1.02rem; }
+    .sec-head { margin-bottom: 42px; }
+    .sec-head .label { display: block; margin-bottom: 16px; }
+    .sec-head .title { font-size: clamp(1.6rem, 3.4vw, 2.6rem); font-weight: 700; letter-spacing: -0.025em; line-height: 1.16; }
+    .sec-head .title .dim { color: var(--muted); }
+    .sec-head .sub { color: var(--muted); margin-top: 14px; font-size: 1.05rem; }
 
     .row-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .row-3 .item { border-top: 1px solid var(--border); padding-top: 18px; }
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
     .item h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 8px; }
     .item p { color: var(--muted); font-size: 0.97rem; }
-    .row-3 .item { border-top: 1px solid var(--border); padding-top: 18px; }
-    .result-title { font-size: clamp(1.6rem, 3.4vw, 2.6rem); font-weight: 700; letter-spacing: -0.025em; line-height: 1.14; margin: 16px 0 46px; }
-    .result-title .dim { color: var(--muted); }
+
+    /* stats */
+    .stat .num { font-size: clamp(2.1rem, 4vw, 2.9rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    .stat p { color: var(--muted); font-size: 0.93rem; margin-top: 12px; }
 
     /* steps */
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 32px; }
     .steps .step-no { font-size: 1.5rem; font-weight: 800; color: var(--accent); display: block; margin-bottom: 12px; letter-spacing: -0.02em; }
     .steps .free { grid-column: 1 / 3; border-top: 1px solid var(--accent); padding-top: 12px; margin-top: 4px; }
     .steps .free span { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); font-weight: 700; }
-
-    /* stats */
-    .stat .num { font-size: clamp(2.1rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
-    .stat p { color: var(--muted); font-size: 0.92rem; margin-top: 12px; }
+    .how-note { margin-top: 40px; color: var(--muted); font-size: 1.12rem; }
+    .how-note strong { color: var(--text); font-weight: 600; }
 
     /* close */
     .close { padding: 88px 0 100px; }
-    .close h2 { font-size: clamp(1.9rem, 4.5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; max-width: 16ch; }
+    .close h2 { font-size: clamp(1.9rem, 4.5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; }
     .close .sub { color: var(--muted); margin-top: 18px; font-size: 1.05rem; }
     .close .cta-row { margin-top: 34px; }
 
-    footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); font-size: 0.88rem; display: flex; justify-content: space-between; }
+    footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); font-size: 0.88rem; }
 
     @media (max-width: 860px) {
       .wrap { padding: 0 24px; }
-      .block { grid-template-columns: 1fr; gap: 28px; }
       .row-3, .steps, .stats-grid { grid-template-columns: 1fr 1fr; }
       .steps .free { grid-column: 1 / 3; }
     }
@@ -98,111 +95,106 @@
     <!-- TOP BAR -->
     <nav class="topbar">
       <span class="name">Borja Anadon</span>
-      <a class="link" href="https://www.linkedin.com/in/borja-anadon-fernandez/" target="_blank" rel="noopener">LinkedIn ↗</a>
     </nav>
 
     <!-- HERO -->
     <header class="hero">
-      <h1>Turning messy funnels into <span class="accent">growth engines.</span></h1>
-      <div class="hero-row">
-        <p class="hero-desc">I build AI-powered growth engines for early-stage B2B founders. <strong>Less time chasing leads, more time building.</strong></p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://calendly.com/borja-anadon-novatalent/30min" target="_blank" rel="noopener">Let's talk</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/borja-anadon-fernandez/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-        </div>
+      <h1>Convierto funnels caóticos<br>en <span class="accent">motores de crecimiento.</span></h1>
+      <p class="hero-desc">He estado donde tú estás: persiguiendo clientes a mano, montando campañas a lo loco, probando cold outreach que no daba nada. Matar moscas a cañonazos. La salida no era otra herramienta, era un sistema: que cada persona interesada reciba el seguimiento que merece. <strong>Menos tiempo persiguiendo clientes, más tiempo construyendo.</strong></p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://calendly.com/borja-anadon-novatalent/hablamos" target="_blank" rel="noopener">Hablemos</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/borja-anadon-fernandez/" target="_blank" rel="noopener">Conectamos en LinkedIn</a>
       </div>
     </header>
 
-    <!-- THE RESULT -->
+    <!-- POR QUÉ YO -->
     <section>
-      <span class="label">The result</span>
-      <h2 class="result-title"><span class="dim">Right now you chase leads by hand and the warm ones go cold.</span> Here's what changes.</h2>
+      <div class="sec-head">
+        <span class="label">Por qué yo</span>
+        <h2 class="title">Porque ya lo he hecho. Y funcionó.</h2>
+        <p class="sub">3+ años de growth y estrategia entre consultoría y startups.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="num accent">+35%</div>
+          <p>Crecimiento de ingresos interanual.</p>
+        </div>
+        <div class="stat">
+          <div class="num accent">+12%</div>
+          <p>Más conversión, con el CAC un 36% más bajo.</p>
+        </div>
+        <div class="stat">
+          <div class="num accent">50%+</div>
+          <p>Nuevos usuarios desde un motor de referidos propio.</p>
+        </div>
+        <div class="stat">
+          <div class="num accent">1.600</div>
+          <p>Leads a la semana en un canal que monté yo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EL RESULTADO -->
+    <section>
+      <div class="sec-head">
+        <span class="label">El resultado</span>
+        <h2 class="title">Tú quieres construir, no perseguir clientes. <span class="dim">Ahora los persigues a mano y los que estaban calientes se enfrían.</span> Esto es lo que va a cambiar.</h2>
+      </div>
       <div class="row-3">
         <div class="item">
-          <h3>Hours back, every week</h3>
-          <p>The outreach and follow-up that eats your day runs without you.</p>
+          <h3>Recuperas horas cada semana</h3>
+          <p>La prospección y el seguimiento que te comen el día funcionan sin ti.</p>
         </div>
         <div class="item">
-          <h3>No warm lead goes cold</h3>
-          <p>Everyone who raised a hand gets followed up. Automatically.</p>
+          <h3>Ningún lead caliente se enfría</h3>
+          <p>Todo el que mostró interés recibe el seguimiento que merece. Automático.</p>
         </div>
         <div class="item">
-          <h3>A funnel that runs itself</h3>
-          <p>Your pipeline becomes a system, not a note in your head.</p>
+          <h3>Un funnel que se gestiona solo</h3>
+          <p>Tu pipeline pasa a ser un sistema, no una nota en tu cabeza.</p>
         </div>
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
+    <!-- CÓMO TRABAJO -->
     <section>
-      <div class="block">
-        <div class="block-head">
-          <span class="label">How it works</span>
-          <div class="lead">Low risk, by design.</div>
-        </div>
-        <div class="steps">
-          <div class="item">
-            <span class="step-no">01</span>
-            <h3>We sit down</h3>
-            <p>As long as it takes. I find what is eating your time.</p>
-          </div>
-          <div class="item">
-            <span class="step-no">02</span>
-            <h3>A plan in a week</h3>
-            <p>What we build, the impact, the timeline.</p>
-          </div>
-          <div class="item">
-            <span class="step-no">03</span>
-            <h3>We build it</h3>
-            <p>If it fits. I own the result.</p>
-          </div>
-          <div class="free"><span>↑ All this is free</span></div>
-        </div>
+      <div class="sec-head">
+        <span class="label">Cómo trabajo</span>
       </div>
+      <div class="steps">
+        <div class="item">
+          <span class="step-no">01</span>
+          <h3>Nos sentamos</h3>
+          <p>El tiempo que haga falta, hasta dar con lo que te come las horas.</p>
+        </div>
+        <div class="item">
+          <span class="step-no">02</span>
+          <h3>Un plan en una semana</h3>
+          <p>Qué construimos, qué impacto tiene y en cuánto tiempo lo tienes.</p>
+        </div>
+        <div class="item">
+          <span class="step-no">03</span>
+          <h3>Lo construimos</h3>
+          <p>Si encaja lo monto yo, y respondo del resultado de principio a fin.</p>
+        </div>
+        <div class="free"><span>↑ Todo esto es gratis</span></div>
+      </div>
+      <p class="how-note"><strong>Trabajo un proyecto a la vez.</strong> Si vamos juntos, me meto a fondo contigo.</p>
     </section>
 
-    <!-- PROOF -->
-    <section>
-      <div class="block">
-        <div class="block-head">
-          <span class="label">Where this comes from</span>
-          <p class="intro">Growth and strategy, 3+ years across consulting and startups.</p>
-        </div>
-        <div class="stats-grid">
-          <div class="stat">
-            <div class="num accent">+35%</div>
-            <p>revenue growth year over year.</p>
-          </div>
-          <div class="stat">
-            <div class="num accent">+12%</div>
-            <p>conversion lift, with CAC cut by 36%.</p>
-          </div>
-          <div class="stat">
-            <div class="num accent">50%+</div>
-            <p>of new users came through a referral engine I rebuilt from scratch.</p>
-          </div>
-          <div class="stat">
-            <div class="num accent">1,600</div>
-            <p>leads a week through an acquisition channel I built and ran.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLOSE -->
+    <!-- CIERRE -->
     <section class="close" id="talk">
-      <h2>Think your funnel is a bit of a mess?</h2>
-      <p class="sub">Let's have a look together. No pitch, just a conversation.</p>
+      <h2>¿Se te va el tiempo persiguiendo clientes sin un seguimiento claro?</h2>
+      <p class="sub">Lo vemos juntos. Sin vender: en 20 minutos te digo qué falla en tu sistema.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://calendly.com/borja-anadon-novatalent/30min" target="_blank" rel="noopener">Book a call</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/borja-anadon-fernandez/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn btn-primary" href="https://calendly.com/borja-anadon-novatalent/hablamos" target="_blank" rel="noopener">Reserva 20 minutos</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/borja-anadon-fernandez/" target="_blank" rel="noopener">Conectamos en LinkedIn</a>
       </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
       <span>Borja Anadon</span>
-      <a href="https://www.linkedin.com/in/borja-anadon-fernandez/" target="_blank" rel="noopener">LinkedIn ↗</a>
     </footer>
 
   </div>
